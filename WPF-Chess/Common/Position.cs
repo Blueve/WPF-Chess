@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WPF_Chess.Common
 {
-    public sealed struct Position : IEqualityComparer<Position>
+    public struct Position : IEqualityComparer<Position>
     {
         private Int16 _x;
         private Int16 _y;
@@ -26,6 +26,18 @@ namespace WPF_Chess.Common
         public bool Equals(Position a, Position b)
         {
             return (a._x == b._x && a._y == b._y);
+        }
+
+        public override string ToString()
+        {
+            //TODO: Need to return the borad position
+            throw new NotImplementedException();
+        }
+
+
+        public int GetHashCode(Position obj)
+        {
+            return obj.GetHashCode();
         }
     }
 }

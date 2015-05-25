@@ -64,6 +64,6 @@ namespace WPF_Chess.Core
         /// Return all possible moves of current piece.
         /// </summary>
         /// <returns></returns>
-        protected virtual List<Position> PossibleMoves();
+        protected abstract List<Position> RefreshPossibleMoves();
     }
 }

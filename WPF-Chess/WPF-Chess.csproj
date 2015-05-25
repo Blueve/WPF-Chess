@@ -62,7 +62,13 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Common\Position.cs" />
+    <Compile Include="Core\Bishop.cs" />
+    <Compile Include="Core\King.cs" />
+    <Compile Include="Core\Knight.cs" />
+    <Compile Include="Core\Pawn.cs" />
     <Compile Include="Core\Piece.cs" />
+    <Compile Include="Core\Queen.cs" />
+    <Compile Include="Core\Rook.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

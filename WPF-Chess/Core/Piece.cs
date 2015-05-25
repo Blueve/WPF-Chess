@@ -10,9 +10,22 @@ namespace WPF_Chess.Core
 {
     abstract class Piece
     {
-        protected Position _position;
+        public enum Side
+        {
+            Black,
+            White
+        }
+        
+        protected Side _side;
 
+        protected Position _position;
         protected List<Position> _possibleMoves;
+
+        public Piece(Side side, Position position)
+        {
+            _side = Side;
+            _position = position;
+        }
 
         public Position Position
         {

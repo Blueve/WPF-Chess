@@ -8,7 +8,7 @@ using WPF_Chess.Common;
 
 namespace WPF_Chess.Core
 {
-    abstract class Piece
+    public abstract class Piece
     {
         public enum Side
         {
@@ -23,13 +23,13 @@ namespace WPF_Chess.Core
 
         public Piece(Side side, Position position)
         {
-            _side = Side;
+            _side = side;
             _position = position;
         }
 
         public Position Position
         {
-            get { return _position}
+            get { return _position; }
         }
 
         /// <summary>
@@ -41,7 +41,7 @@ namespace WPF_Chess.Core
         {
             get
             {
-                return _possibleMoves ?? PossibleMoves();
+                return _possibleMoves ?? RefreshPossibleMoves();
             }
         }
 

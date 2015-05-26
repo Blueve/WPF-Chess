@@ -48,7 +48,7 @@ namespace WPF_Chess.Common
         }
 
 
-        public int GetHashCode()
+        public override int GetHashCode()
         {
             return _x * 10 + _y;
         }

@@ -8,16 +8,30 @@ namespace WPF_Chess.Common
 {
     public struct Position : IEqualityComparer<Position>
     {
-        private Int16 _x;
-        private Int16 _y;
+        private int _x;
+        private int _y;
 
-        public Int16 X
+        public Position(int x, int y)
+        {
+            _x = _y = 0;
+            X = x;
+            Y = y;
+        }
+
+        public Position(int x, char y)
+        {
+            _x = _y = 0;
+            X = 9 - x;
+            Y = (int)(y - 'A' + 1);
+        }
+
+        public int X
         {
             get { return _x; }
             set { _x = (value > 8 || value < 1) ? 0 : value; }
         }
 
-        public Int16 Y
+        public int Y
         {
             get { return _y; }
             set { _y = (value > 8 || value < 1) ? 0 : value; }
@@ -30,8 +44,7 @@ namespace WPF_Chess.Common
 
         public override string ToString()
         {
-            //TODO: Need to return the borad position
-            throw new NotImplementedException();
+            return string.Format("({0}, {1})", 9 - _x, (char)(_y - 1 + 'A'));
         }
 
 

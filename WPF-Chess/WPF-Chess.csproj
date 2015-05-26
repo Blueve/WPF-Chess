@@ -135,10 +135,10 @@
     <EmbeddedResource Include="Asset\Images\Pawn_B.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Asset\Images\Rook_W.png">
+    <EmbeddedResource Include="Asset\Images\Pawn_W.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Asset\Images\Pawn_W.png">
+    <EmbeddedResource Include="Asset\Images\Rook_W.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WPF_Chess.Common
 {
-    public struct Position : IEqualityComparer<Position>
+    public struct Position
     {
         private int _x;
         private int _y;
@@ -18,11 +18,11 @@ namespace WPF_Chess.Common
             Y = y;
         }
 
-        public Position(int x, char y)
+        public Position(char x, int y)
         {
             _x = _y = 0;
-            X = 9 - x;
-            Y = (int)(y - 'A' + 1);
+            X = (int)(x - 'A' + 1);
+            Y = 9 - y;
         }
 
         public int X
@@ -37,20 +37,20 @@ namespace WPF_Chess.Common
             set { _y = (value > 8 || value < 1) ? 0 : value; }
         }
 
-        public bool Equals(Position a, Position b)
+        public bool Equals(Position othr)
         {
-            return (a._x == b._x && a._y == b._y);
+            return (_x == othr._x && _y == othr._y);
         }
 
         public override string ToString()
         {
-            return string.Format("({0}, {1})", 9 - _x, (char)(_y - 1 + 'A'));
+            return string.Format("({0}, {1})", (char)(_x - 1 + 'A'), 9 - _y);
         }
 
 
-        public int GetHashCode(Position obj)
+        public int GetHashCode()
         {
-            return obj.GetHashCode();
+            return _x * 10 + _y;
         }
     }
 }

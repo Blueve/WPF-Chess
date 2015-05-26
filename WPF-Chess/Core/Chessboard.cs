@@ -15,10 +15,21 @@ namespace WPF_Chess.Core
         /// <summary>
         /// Storage all pieces
         /// </summary>
-        private List<Piece> _chessboard = new List<Piece>();
+        private readonly List<Piece> _board = new List<Piece>();
 
+        public IEnumerable<Piece> Board
+        {
+            get { return _board; }
+        }
+
+        /// <summary>
+        /// Initialize the chess board
+        /// </summary>
         public void Init()
         {
+            // Clear current board
+            _board.Clear();
+
             // Create all pieces
             List<Piece> pieces = new List<Piece>()
             {
@@ -45,12 +56,12 @@ namespace WPF_Chess.Core
             };
             for (int i = 1; i <= 8; i++ )
             {
-                pieces.Add(new Pawn(S.Black, 2, i));
-                pieces.Add(new Pawn(S.White, 7, i));
+                pieces.Add(new Pawn(S.Black, new P(2, i)));
+                pieces.Add(new Pawn(S.White, new P(7, i)));
             }
 
             // Put all pieces on the board
-            _chessboard.AddRange(pieces);
+            _board.AddRange(pieces);
         }
     }
 }

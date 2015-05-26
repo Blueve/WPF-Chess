@@ -16,7 +16,7 @@ namespace WPF_Chess_UnitTest
             Position a = new Position(1, 5);
             Assert.AreEqual(e, a);
 
-            a = new Position('A', 4);
+            a = new Position('B', 3);
             Assert.AreEqual(e, a);
         }
 
@@ -42,11 +42,11 @@ namespace WPF_Chess_UnitTest
         [TestMethod]
         public void TestSetter()
         {
-            Position e = new Position { X = 0, Y = 0 };
+            Position e = new Position { X = -1, Y = -1 };
 
             Assert.AreEqual(e, new Position(100, -100));
-            Assert.AreEqual(e, new Position(9, 9));
-            Assert.AreEqual(e, new Position(0, 0));
+            Assert.AreEqual(e, new Position(8, 8));
+            Assert.AreEqual(e, new Position(-1, -1));
 
             e = new Position { X = 1, Y = 5 };
             Position a = new Position();
@@ -68,8 +68,8 @@ namespace WPF_Chess_UnitTest
         [TestMethod]
         public void TestToString()
         {
-            Position e = new Position { X = 2, Y = 4 };
-            Assert.AreEqual("(B, 5)", e.ToString());
+            Position e = new Position { X = 1, Y = 5 };
+            Assert.AreEqual("(B, 3)", e.ToString());
 
             e = new Position('B', 6);
             Assert.AreEqual("(B, 6)", e.ToString());

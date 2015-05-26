@@ -16,5 +16,9 @@ namespace WPF_Chess.Core
         {
             throw new NotImplementedException();
         }
+        protected override string TypeName()
+        {
+            return "BISHOP";
+        }
     }
 }

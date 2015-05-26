@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media.Imaging;
 using WPF_Chess.Common;
 
 namespace WPF_Chess.Core
@@ -15,6 +16,11 @@ namespace WPF_Chess.Core
         protected override List<Common.Position> RefreshPossibleMoves()
         {
             throw new NotImplementedException();
+        }
+
+        protected override string TypeName()
+        {
+            return "KING";
         }
     }
 }

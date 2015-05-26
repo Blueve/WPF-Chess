@@ -13,6 +13,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using WPF_Chess.Common;
+using WPF_Chess.Core;
+
 namespace WPF_Chess
 {
     /// <summary>
@@ -20,9 +23,32 @@ namespace WPF_Chess
     /// </summary>
     public partial class MainWindow : Window
     {
+        private Chessboard _game = new Chessboard();
+
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void NewGame_Click(object sender, RoutedEventArgs e)
+        {
+            _game.Init();
+            var pieces = _game.Pieces;
+
+            foreach (var piece in pieces)
+            {
+                DrawingVisual v = new DrawingVisual();
+                using (var dc = v.RenderOpen())
+                {
+                    dc.DrawImage(
+                        piece.Image,
+                        new Rect(
+                            new Point((piece.Position.X - 1) * 50, (piece.Position.Y - 1) * 50),
+                            new Size(50, 50)
+                            ));
+                }
+                boardSurface.AddPieces(v);
+            }
         }
     }
 }

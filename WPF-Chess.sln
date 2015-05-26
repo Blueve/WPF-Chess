@@ -5,6 +5,11 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF-Chess", "WPF-Chess\WPF-Chess.csproj", "{ABA3F254-E903-4F36-B170-B57BD8577264}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF-Chess-UnitTest", "WPF-Chess-UnitTest\WPF-Chess-UnitTest.csproj", "{D714EBA8-19E7-4E89-A403-D88ED70A31A5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{ABA3F254-E903-4F36-B170-B57BD8577264} = {ABA3F254-E903-4F36-B170-B57BD8577264}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +20,10 @@ Global
 		{ABA3F254-E903-4F36-B170-B57BD8577264}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ABA3F254-E903-4F36-B170-B57BD8577264}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ABA3F254-E903-4F36-B170-B57BD8577264}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D714EBA8-19E7-4E89-A403-D88ED70A31A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D714EBA8-19E7-4E89-A403-D88ED70A31A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D714EBA8-19E7-4E89-A403-D88ED70A31A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D714EBA8-19E7-4E89-A403-D88ED70A31A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

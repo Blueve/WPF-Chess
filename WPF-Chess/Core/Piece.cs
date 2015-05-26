@@ -27,23 +27,6 @@ namespace WPF_Chess.Core
                 {"PAWN_B", new BitmapImage(new Uri("Asset/Images/Pawn_B.png", UriKind.Relative))},
                 {"PAWN_W", new BitmapImage(new Uri("Asset/Images/Pawn_W.png", UriKind.Relative))}
             };
-        //protected static BitmapImage _KING_B = new BitmapImage(new Uri("Asset/Images/King_B.png", UriKind.Relative));
-        //protected static BitmapImage _KING_W = new BitmapImage(new Uri("Asset/Images/King_W.png", UriKind.Relative));
-
-        //protected static BitmapImage _QUEEN_B = new BitmapImage(new Uri("Asset/Images/Queen_B.png", UriKind.Relative));
-        //protected static BitmapImage _QUEEN_W = new BitmapImage(new Uri("Asset/Images/Queen_W.png", UriKind.Relative));
-
-        //protected static BitmapImage _KNIGHT_B = new BitmapImage(new Uri("Asset/Images/Knight_B.png", UriKind.Relative));
-        //protected static BitmapImage _KNIGHT_W = new BitmapImage(new Uri("Asset/Images/Knight_W.png", UriKind.Relative));
-
-        //protected static BitmapImage _BISHOP_B = new BitmapImage(new Uri("Asset/Images/Bishop_B.png", UriKind.Relative));
-        //protected static BitmapImage _BISHOP_W = new BitmapImage(new Uri("Asset/Images/Bishop_W.png", UriKind.Relative));
-
-        //protected static BitmapImage _ROOK_B = new BitmapImage(new Uri("Asset/Images/Rook_B.png", UriKind.Relative));
-        //protected static BitmapImage _ROOK_W = new BitmapImage(new Uri("Asset/Images/Rook_W.png", UriKind.Relative));
-
-        //protected static BitmapImage _PAWN_B = new BitmapImage(new Uri("Asset/Images/Pawn_B.png", UriKind.Relative));
-        //protected static BitmapImage _PAWN_W = new BitmapImage(new Uri("Asset/Images/Pawn_W.png", UriKind.Relative));
         #endregion
 
         public enum Side

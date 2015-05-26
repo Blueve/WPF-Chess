@@ -54,10 +54,10 @@ namespace WPF_Chess.Core
                 new King(S.Black, new P('E', 8)),
                 new King(S.White, new P('E', 1))
             };
-            for (int i = 1; i <= 8; i++ )
+            for (int i = 0; i < 8; i++ )
             {
-                pieces.Add(new Pawn(S.Black, new P(i, 2)));
-                pieces.Add(new Pawn(S.White, new P(i, 7)));
+                pieces.Add(new Pawn(S.Black, new P(i, 1)));
+                pieces.Add(new Pawn(S.White, new P(i, 6)));
             }
 
             // Put all pieces on the board

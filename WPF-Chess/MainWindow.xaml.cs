@@ -37,17 +37,7 @@ namespace WPF_Chess
 
             foreach (var piece in pieces)
             {
-                DrawingVisual v = new DrawingVisual();
-                using (var dc = v.RenderOpen())
-                {
-                    dc.DrawImage(
-                        piece.Image,
-                        new Rect(
-                            new Point((piece.Position.X - 1) * 50, (piece.Position.Y - 1) * 50),
-                            new Size(50, 50)
-                            ));
-                }
-                boardSurface.AddPieces(v);
+                boardSurface.AddPiece(piece);
             }
         }
     }

@@ -21,20 +21,20 @@ namespace WPF_Chess.Common
         public Position(char x, int y)
         {
             _x = _y = 0;
-            X = (int)(x - 'A' + 1);
-            Y = 9 - y;
+            X = (int)(x - 'A');
+            Y = 8 - y;
         }
 
         public int X
         {
             get { return _x; }
-            set { _x = (value > 8 || value < 1) ? 0 : value; }
+            set { _x = (value > 7 || value < 0) ? -1 : value; }
         }
 
         public int Y
         {
             get { return _y; }
-            set { _y = (value > 8 || value < 1) ? 0 : value; }
+            set { _y = (value > 7 || value < 0) ? -1 : value; }
         }
 
         public bool Equals(Position othr)
@@ -44,7 +44,7 @@ namespace WPF_Chess.Common
 
         public override string ToString()
         {
-            return string.Format("({0}, {1})", (char)(_x - 1 + 'A'), 9 - _y);
+            return string.Format("({0}, {1})", (char)(_x + 'A'), 8 - _y);
         }
 
 

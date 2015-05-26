@@ -69,8 +69,10 @@ namespace WPF_Chess_UnitTest
         public void TestToString()
         {
             Position e = new Position { X = 2, Y = 4 };
-
             Assert.AreEqual("(B, 5)", e.ToString());
+
+            e = new Position('B', 6);
+            Assert.AreEqual("(B, 6)", e.ToString());
         }
     }
 }

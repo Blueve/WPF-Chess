@@ -63,6 +63,7 @@
     </Compile>
     <Compile Include="Common\Position.cs" />
     <Compile Include="Component\BoardCanvas.cs" />
+    <Compile Include="Core\Game.cs" />
     <Compile Include="Core\Pieces\Bishop.cs" />
     <Compile Include="Core\Chessboard.cs" />
     <Compile Include="Core\Pieces\King.cs" />

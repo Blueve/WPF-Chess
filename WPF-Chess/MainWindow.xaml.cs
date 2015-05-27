@@ -23,7 +23,7 @@ namespace WPF_Chess
     /// </summary>
     public partial class MainWindow : Window
     {
-        private Chessboard _game = new Chessboard();
+        private Game _game = new Game();
 
         public MainWindow()
         {
@@ -32,7 +32,9 @@ namespace WPF_Chess
 
         private void NewGame_Click(object sender, RoutedEventArgs e)
         {
-            _game.Init();
+            Player p1 = new Player(Piece.Side.Black);
+            Player p2 = new Player(Piece.Side.White);
+            _game.Start(p1, p2);
             var pieces = _game.Pieces;
 
             foreach (var piece in pieces)

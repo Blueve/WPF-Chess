@@ -9,7 +9,7 @@ namespace WPF_Chess.Core
 {
     internal sealed class Knight : Piece
     {
-        public Knight(Side side, Position position) : base(side, position) { }
+        public Knight(Side side, Position position, IReadOnlyList<Piece> pieces) : base(side, position, pieces) { }
 
         protected override List<Common.Position> RefreshPossibleMoves()
         {

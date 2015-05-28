@@ -36,14 +36,15 @@ namespace WPF_Chess.Core
         }
 
         protected Side _side;
-
+        protected IReadOnlyList<Piece> _pieces;
         protected Position _position;
         protected List<Position> _possibleMoves;
 
-        public Piece(Side side, Position position)
+        public Piece(Side side, Position position, IReadOnlyList<Piece> pieces)
         {
             _side = side;
             _position = position;
+            _pieces = pieces;
         }
 
         public Position Position

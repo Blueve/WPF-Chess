@@ -10,7 +10,7 @@ namespace WPF_Chess.Core
     internal sealed class Rook : Piece
     {
 
-        public Rook(Side side, Position position) : base(side, position) { }
+        public Rook(Side side, Position position, IReadOnlyList<Piece> pieces) : base(side, position, pieces) { }
 
         protected override List<Common.Position> RefreshPossibleMoves()
         {
